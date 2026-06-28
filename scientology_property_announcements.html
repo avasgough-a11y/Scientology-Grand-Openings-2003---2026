@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Scientology Grand Openings, 2003–2026</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --navy: #002B5C;
+            --steel: #1A5F9A;
+            --sky: #4A90C4;
+            --gold: #C8A84B;
+            --offwhite: #F7F8FA;
+            --text: #1A1A2E;
+            --muted: #5A6272;
+            --rule: #D0D8E4;
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: #fff;
+            color: var(--text);
+            font-family: 'Source Serif 4', Georgia, serif;
+            font-size: 19px;
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ── Hero header ── */
+        .hero {
+            background: var(--navy);
+            padding: 4em 2em 3.5em;
+            text-align: left;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at 80% 20%, rgba(74,144,196,0.12) 0%, transparent 65%);
+            pointer-events: none;
+        }
+
+        .hero-inner {
+            max-width: 720px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-weight: 900;
+            font-size: clamp(2em, 5vw, 3.2em);
+            line-height: 1.08;
+            color: #fff;
+            margin: 0 0 0.6em 0;
+            letter-spacing: -0.01em;
+        }
+
+        .hero h1 em {
+            font-style: italic;
+            color: var(--sky);
+        }
+
+        .hero .subhead {
+            font-family: 'Source Serif 4', Georgia, serif;
+            font-size: 1em;
+            line-height: 1.55;
+            color: rgba(255,255,255,0.72);
+            margin: 0 0 1.8em 0;
+            max-width: 600px;
+        }
+
+        .hero-meta {
+            display: flex;
+            align-items: center;
+            gap: 1.4em;
+            border-top: 1px solid rgba(255,255,255,0.12);
+            padding-top: 1.2em;
+        }
+
+        .hero-meta .byline {
+            font-family: 'DM Mono', monospace;
+            font-size: 0.6em;
+            letter-spacing: 0.08em;
+            color: rgba(255,255,255,0.5);
+            text-transform: uppercase;
+        }
+
+        .hero-meta .byline strong {
+            color: rgba(255,255,255,0.85);
+            font-weight: 500;
+        }
+
+        /* ── Fade below hero ── */
+        .hero-fade {
+            height: 18px;
+            background: linear-gradient(to bottom, #001e42, #ffffff);
+        }
+
+        /* ── Main content ── */
+        .content {
+            max-width: 640px;
+            margin: auto;
+            padding: 0 2em;
+        }
+
+        .body-text {
+            padding-top: 2.4em;
+        }
+
+        p {
+            line-height: 1.7;
+            margin: 0;
+            padding-bottom: 1.2em;
+            font-size: 1em;
+        }
+
+        .body-text > p:first-child {
+            font-size: 1.08em;
+            color: #2a2a3e;
+        }
+
+        a {
+            color: var(--steel);
+            text-decoration: underline;
+            text-decoration-color: rgba(26,95,154,0.35);
+            text-underline-offset: 3px;
+            transition: color 0.15s, text-decoration-color 0.15s;
+        }
+
+        a:hover {
+            color: var(--navy);
+            text-decoration-color: var(--navy);
+        }
+
+        /* ── Section divider ── */
+        .section-divider {
+            display: flex;
+            align-items: center;
+            gap: 0.8em;
+            margin: 1.8em 0 1.6em;
+        }
+
+        .section-divider::before,
+        .section-divider::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: var(--rule);
+        }
+
+        .section-divider span {
+            font-family: 'DM Mono', monospace;
+            font-size: 0.5em;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--muted);
+            white-space: nowrap;
+        }
+
+        /* ── Chart border wrapper ── */
+        .chart-border {
+            border: 1px solid #D0D8E4;
+            border-radius: 4px;
+            padding: 1em;
+            background: #F7F8FA;
+            margin-bottom: 1.2em;
+        }
+
+        /* ── iframes ── */
+        iframe {
+            max-width: 100%;
+            border: none;
+            display: block;
+        }
+
+        /* ── Figure / photo ── */
+        figure {
+            margin: 0.6em 0 1.4em;
+            padding: 0;
+            position: relative;
+        }
+
+        figure img {
+            width: 100%;
+            display: block;
+        }
+
+        figure::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--navy);
+            opacity: 0.4;
+        }
+
+        figcaption {
+            font-family: 'DM Mono', monospace;
+            font-size: 0.58em;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-top: 0.7em;
+            display: block;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* ── Footer ── */
+        .footer {
+            background: var(--navy);
+            color: rgba(255,255,255,0.4);
+            text-align: center;
+            font-family: 'DM Mono', monospace;
+            font-size: 0.6em;
+            letter-spacing: 0.06em;
+            margin-top: 5em;
+            padding: 3em 2em;
+        }
+
+        .footer a {
+            color: rgba(255,255,255,0.55);
+        }
+
+        /* ── Mobile ── */
+        @media (max-width: 640px) {
+            body {
+                font-size: 17px;
+            }
+
+            .hero {
+                padding: 2.5em 1.2em 2.5em;
+            }
+
+            .content {
+                padding-left: 0.5em;
+                padding-right: 0.5em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Hero -->
+    <header class="hero">
+        <div class="hero-inner">
+            <h1>Scientology Grand Openings,<br><em>2003–2026</em></h1>
+            <p class="subhead">The buildings the organization has chosen to formally celebrate reveal patterns of geographic concentration and variation in growth for highlighted establishments over the past 23 years.</p>
+            <div class="hero-meta">
+                <span class="byline">By <strong>Ava Gough</strong></span>
+            </div>
+        </div>
+    </header>
+
+    <div class="hero-fade"></div>
+
+    <!-- Body -->
+    <div class="content">
+        <div class="body-text">
+
+            <p>Since opening its first <a href="https://www.scientology.org/what-is-scientology/scientology-background/the-beginning-of-scientology.html">church</a> in Los Angeles, California in 1954, The Church of Scientology has significantly expanded its presence in the U.S. and abroad.</p>
+
+            <p>According to the organization's <a href="https://www.scientologynews.org/quick-facts/scientology.html">official website</a>, over 11,000 Scientology churches, missions and affiliated groups operate across more than 160 nations to date. They have also claimed that their total international assets and property holdings have <a href="https://www.scientologynews.org/quick-facts/">more than doubled</a> since 2004, the year that marked the beginning of an <a href="https://www.scientology.org/david-miscavige/biography/creating-a-new-era-of-expansion.html">"era of expansion,"</a> spearheaded by the Church's leader, David Miscavige.</p>
+
+            <p>As part of its growth ambitions, the organization has worked to develop more <a href="https://www.scientology.org/churches/ideal-orgs/">"Ideal Orgs,"</a> also referred to as "Ideal Churches," which is one of the leading property types featured on their <a href="https://www.scientologynews.org/press-releases/church-openings/">New Churches of Scientology Grand Openings</a> webpage. This archive highlights 85 announcements between 2003–2026 across 19 countries and serves as the primary source for this report, which evaluates  Scientology's property growth over time and where they have chosen to concentrate their expansion efforts as reflected by these highlighted establishments.</p>
+
+        </div>
+
+        <div class="chart-border">
+            <iframe title="Scientology Property Announcements Peaked in 2012" aria-label="Column Chart" id="datawrapper-chart-XkbbN" src="https://datawrapper.dwcdn.net/XkbbN/2/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="459" data-external="1"></iframe>
+            <script type="text/javascript">(function(){function e(){window.addEventListener(`message`,function(e){if(e.data[`datawrapper-height`]!==void 0){var t=document.querySelectorAll(`iframe`);for(var n in e.data[`datawrapper-height`])for(var r=0,i;i=t[r];r++)if(i.contentWindow===e.source){var a=e.data[`datawrapper-height`][n]+`px`;i.style.height=a}}})}e()})();</script>
+        </div>
+
+        <div class="content">
+            <p>In 2012, the Church of Scientology recorded grand openings for a dozen properties across four countries: Germany, Israel, Italy and the U.S. Of those buildings, nine were announced in six U.S. states.</p>
+
+            <p>Following their 2012 peak, the organization's property celebrations dipped, with only seven documented in the archive between 2013 and 2015, the later of which saw no grand openings. However, 2016 proved to be a bigger year for building celebrations, with nine locations publicized, making it the second highest year of grand opening property announcements for Scientology since 2003. As displayed on the above chart, announcement activity continued to fluctuate over the next several years.</p>
+
+            <p>So far this year, Scientology has publicized two grand openings, one in San Juan, Puerto Rico, and one in Clearwater, Florida, the organization's chosen spiritual headquarters. Unlike the majority of celebrated properties, including the one in Puerto Rico, this building is not classified as a church or an "Ideal Org," but rather as a religious retreat. According to <a href="https://www.independent.co.uk/news/world/americas/us-politics/scientology-building-auditorium-florida-lawsuit-b2999258.html">The Independent</a>, it is one of almost a dozen other buildings owned by the organization in the area.</p>
+
+            <p>The data extracted from the archive webpage showed four grand openings in Clearwater, making up for half of the formal property announcements in Florida since 2009. While the state has become one of the most popular locations amongst Scientologists, California comes out on top for the highest number of properties featured in the archive.</p>
+        </div>
+
+        <div class="chart-border">
+            <iframe title="California Leads U.S. Scientology Property Announcements" aria-label="Dot Plot" id="datawrapper-chart-ffcXb" src="https://datawrapper.dwcdn.net/ffcXb/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="513" data-external="1"></iframe>
+            <script type="text/javascript">(function(){function e(){window.addEventListener(`message`,function(e){if(e.data[`datawrapper-height`]!==void 0){var t=document.querySelectorAll(`iframe`);for(var n in e.data[`datawrapper-height`])for(var r=0,i;i=t[r];r++)if(i.contentWindow===e.source){var a=e.data[`datawrapper-height`][n]+`px`;i.style.height=a}}})}e()})();</script>
+        </div>
+
+        <div class="section-divider"><span>Global Expansion</span></div>
+
+        <p>In addition to their expansion efforts in the U.S., the Church has made moves to foster an international presence across six continents, although they have not recorded grand openings for their locations in all of them.</p>
+
+        <p>In the grand openings archive, the first location ever documented was in Johannesburg, which has had three formal Scientology property celebrations, the latest having been in 2019. Scientology has promoted openings in three other parts of South Africa as well, making it the nation with the second most grand openings announcements since 2003.</p>
+
+        <div class="chart-border">
+            <iframe title="U.S. Dominates Scientology Property Openings" aria-label="Stacked Bars" id="datawrapper-chart-bY076" src="https://datawrapper.dwcdn.net/bY076/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="595" data-external="1"></iframe>
+            <script type="text/javascript">(function(){function e(){window.addEventListener(`message`,function(e){if(e.data[`datawrapper-height`]!==void 0){var t=document.querySelectorAll(`iframe`);for(var n in e.data[`datawrapper-height`])for(var r=0,i;i=t[r];r++)if(i.contentWindow===e.source){var a=e.data[`datawrapper-height`][n]+`px`;i.style.height=a}}})}e()})();</script>
+        </div>
+
+        <div class="section-divider"><span>Looking Ahead</span></div>
+
+        <p>It appears the U.S. will continue to receive the majority of new buildings in the future.</p>
+
+        <p>Under a tab on their website called <a href="https://www.scientology.org/david-miscavige/building-future-scientology-religion/">Building for the Future of the Scientology Religion</a>, the organization has revealed a list of locations where new Ideal Orgs are being planned or are currently being constructed.</p>
+
+        <div class="chart-border">
+            <iframe title="Future Scientology Property Locations" aria-label="Table" id="datawrapper-chart-lBqCC" src="https://datawrapper.dwcdn.net/lBqCC/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="878" data-external="1"></iframe>
+            <script type="text/javascript">(function(){function e(){window.addEventListener(`message`,function(e){if(e.data[`datawrapper-height`]!==void 0){var t=document.querySelectorAll(`iframe`);for(var n in e.data[`datawrapper-height`])for(var r=0,i;i=t[r];r++)if(i.contentWindow===e.source){var a=e.data[`datawrapper-height`][n]+`px`;i.style.height=a}}})}e()})();</script>
+        </div>
+        <p>The U.S. leads with seven planned openings and Italy comes in second with four new locations. </p>
+		<p>The chart also includes other places where Scientology has documented grand openings, along with locations where the organization is present but were never included in the archive, such as Argentina, which currently hosts two Scientology buildings.</p>
+		<p>Whether these properties will receive grand openings is yet to be determined, but it is evident the organization will continue to try to grow its global footprint and strengthen its roots in the U.S. through their establishment of Ideal Orgs and adjacent facilities.</p>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Scientology Grand Openings, 2003–2026 &nbsp;·&nbsp; By Ava Gough<br>
+        Data sourced from the <a href="https://www.scientologynews.org/press-releases/church-openings/">Church of Scientology Grand Openings archive</a></p>
+    </footer>
+
+</body>
+</html>
